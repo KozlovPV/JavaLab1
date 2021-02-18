@@ -4,10 +4,7 @@ public class Palindrome {
     public static void main(String[] args) {
         for (int i = 0; i < args.length; i++) {
             String s = args[i];
-            String s1 = reverseString(s);
-            boolean temp = true;
-            temp = isPalindrome(s, s1);
-            if (temp == true) {
+            if (isPalindrome(s)) {
                 System.out.println(s + " Слово является полиндромом!");
             } else {
                 System.out.println(s + " Слово не явлеятся полиндромом!");
@@ -23,7 +20,8 @@ public class Palindrome {
         return str;
     }
 
-    public static boolean isPalindrome(String s, String s1) {
+    public static boolean isPalindrome(String s) {
+        String s1=reverseString(s);
         return s1.equals(s);
     }
 }
